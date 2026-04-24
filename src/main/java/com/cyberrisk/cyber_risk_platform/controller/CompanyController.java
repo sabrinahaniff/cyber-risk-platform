@@ -2,6 +2,7 @@ package com.cyberrisk.cyber_risk_platform.controller;
 
 import com.cyberrisk.cyber_risk_platform.model.Company;
 import com.cyberrisk.cyber_risk_platform.service.CompanyService;
+import com.cyberrisk.cyber_risk_platform.service.MemoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,9 +14,11 @@ import java.util.List;
 public class CompanyController {
 
     private final CompanyService companyService;
+    private final MemoService memoService;
 
-    public CompanyController(CompanyService companyService) {
+    public CompanyController(CompanyService companyService, MemoService memoService) {
         this.companyService = companyService;
+        this.memoService = memoService;
     }
 
     @PostMapping
@@ -38,5 +41,16 @@ public class CompanyController {
     public ResponseEntity<Void> deleteCompany(@PathVariable Long id) {
         companyService.deleteCompany(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/{id}/generate-memo")
+    public ResponseEntity<String> generateMemo(@PathVariable Long id) {
+        try {
+            Company company = companyService.getCompanyById(id);
+            String memo = memoService.generateMemo(company);
+            return ResponseEntity.ok(memo);
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().body("Error generating memo: " + e.getMessage());
+        }
     }
 }
