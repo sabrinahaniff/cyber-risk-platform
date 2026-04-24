@@ -10,12 +10,16 @@ import java.util.List;
 public class CompanyService {
 
     private final CompanyRepository companyRepository;
+    private final RiskScoringService riskScoringService;
 
-    public CompanyService(CompanyRepository companyRepository) {
+    public CompanyService(CompanyRepository companyRepository, RiskScoringService riskScoringService) {
         this.companyRepository = companyRepository;
+        this.riskScoringService = riskScoringService;
     }
 
     public Company createCompany(Company company) {
+        int score = riskScoringService.calculateRiskScore(company);
+        company.setRiskScore(score);
         return companyRepository.save(company);
     }
 
