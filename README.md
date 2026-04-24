@@ -1,6 +1,6 @@
 # Cyber Risk Platform
 
-A full-stack cyber insurance underwriting platform that automates risk assessment for companies. Built with Spring Boot, PostgreSQL, and AI — designed for the kind of workflow a cyber insurance underwriter at a company like Intact would use daily.
+A full-stack cyber insurance underwriting platform that automates risk assessment for companies. Built with Spring Boot, PostgreSQL, and AI designed for the kind of workflow a cyber insurance underwriter would use daily.
 
 ## What it does
 
@@ -96,3 +96,14 @@ curl -X POST http://localhost:8080/api/companies/1/generate-memo
 ```
 
 ## Architecture
+REST API (Spring Boot)
+↓
+Risk Scoring Engine
+↓
+AI Memo Generator (Groq)
+↓
+PostgreSQL Database
+
+## CI/CD
+
+GitHub Actions automatically builds and tests the application on every push to main.
