@@ -54,10 +54,10 @@ Minimum score: 0
 
 | Score Range | Risk Level |
 |-------------|------------|
-| 80 – 100 | LOW |
-| 60 – 79 | MEDIUM |
-| 40 – 59 | HIGH |
-| 0 – 39 | CRITICAL |
+| 80 - 100 | LOW |
+| 60 - 79 | MEDIUM |
+| 40 - 59 | HIGH |
+| 0 - 39 | CRITICAL |
 
 ---
 
