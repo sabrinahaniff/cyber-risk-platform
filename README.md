@@ -4,6 +4,9 @@ A full-stack web application that automates cyber insurance risk assessment. Com
 
 Built this to explore how AI can automate real workflows in the insurance industry. The scoring model is based on common cybersecurity frameworks (firewall presence, encryption, incident response planning, breach history, etc).
 
+<img width="1454" height="807" alt="image" src="https://github.com/user-attachments/assets/8e909d86-9c0d-43c6-94dc-80c07af4c688" />
+
+
 ---
 
 ## Features
@@ -14,6 +17,9 @@ Built this to explore how AI can automate real workflows in the insurance indust
 - **React Dashboard**: form-based UI with an animated SVG risk gauge and security breakdown
 - **Dockerized**: entire app (backend + database) spins up with one `docker-compose up` command
 - **CI/CD**: GitHub Actions pipeline builds and tests on every push to main
+
+<img width="1453" height="801" alt="image" src="https://github.com/user-attachments/assets/c75cf6fc-7098-4428-bc22-731fec0116c0" />
+
 
 ---
 
