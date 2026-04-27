@@ -49,4 +49,5 @@ jobs:
           SPRING_DATASOURCE_USERNAME: cyberrisk
           SPRING_DATASOURCE_PASSWORD: password123
           GROQ_API_KEY: test-key
+          SPRING_PROFILES_ACTIVE: test
         run: ./mvnw test
