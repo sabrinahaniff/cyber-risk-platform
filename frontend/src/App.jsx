@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API = "http://localhost:8080/api";
+const API = "http://15.156.81.221:8080/api";
 
 const initialForm = {
   name: "", industry: "", employeeCount: "", country: "",
